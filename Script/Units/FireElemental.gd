@@ -6,10 +6,15 @@ func _ready():
 	attack = 10
 	cost = 10
 	unit_name = "FireElemental"
+	targeting = 1
 
 func _death():
 	animated_sprite.play("Die")
 
-func _attck(enermy:IUnit):
+func _attack(enermy:IUnit):
+	animated_sprite.play("Attack")
 	enermy.health -= attack
+
+func _get_targeting():
+	return targeting
 	

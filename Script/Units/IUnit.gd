@@ -6,6 +6,7 @@ var health = 0
 var attack = 0
 var cost = 0
 var unit_name = ""
+var targeting = 0
 
 var lane_position: int = 0
 
@@ -20,8 +21,11 @@ func _unimplemeneted (method_name: String):
 func _calculate_position(mapLength: int):
 	return lane_position/mapLength
 
-func _attck(enermy: IUnit):
+func _attack(enermy: IUnit):
 	_unimplemeneted("Attack")
 
 func _death():
 	_unimplemeneted("Death")
+
+func _get_targeting():
+	_unimplemeneted("Targeting")
