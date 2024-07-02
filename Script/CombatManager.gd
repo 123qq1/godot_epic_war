@@ -3,14 +3,18 @@ extends Node
 var combatArray: Array[IUnit] = []
 var combatArray1: Array[IUnit] = []
 
-var ele1 = "res://Scene/FireElemental.tscn"
-var ele2 = "res://Scene/FireElemental.tscn"
+var ele1 = load("res://Scene/FireElemental.tscn")
+var ele2 = load("res://Scene/FireElemental.tscn")
 var combat_timer = 0
 
 
 func _ready():
-	combatArray.push_front(ele1)
-	combatArray1.push_front(ele2)
+	var ele1scene = ele1.instantiate()
+	add_child(ele1scene)
+	combatArray.push_front(ele1scene)
+	var ele2scene = ele2.instantiate()
+	add_child(ele2scene)
+	combatArray.push_front(ele2scene)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -36,7 +40,7 @@ func _combatRound():
 				
 func _findLowestHealth(array: Array[IUnit]):
 	var temp:IUnit
-	temp.health=0
+	temp.health = 0
 	for IUnit in array:
 		if IUnit.health <= temp.health:
 			temp = IUnit
