@@ -21,7 +21,7 @@ func _calculate_position(mapLength: int):
 	return lane_position/mapLength
 
 func _attck(enermy: IUnit):
-	_unimplemeneted("Attach")
+	_unimplemeneted("Attack")
 
 func _death():
 	_unimplemeneted("Death")
