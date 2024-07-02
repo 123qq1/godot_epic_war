@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1jn5qxtwsbuy"]
+
+[ext_resource type="PackedScene" uid="uid://rh58ejbqfoct" path="res://Scene/FireElemental.tscn" id="1_11u77"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Unit" parent="." instance=ExtResource("1_11u77")]
