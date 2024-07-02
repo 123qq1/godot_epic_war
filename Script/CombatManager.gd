@@ -9,15 +9,19 @@ var combat_timer = 0
 
 
 func _ready():
-	var ele1scene = ele1.instantiate()
-	add_child(ele1scene)
-	combatArray.push_front(ele1scene)
-	var ele2scene = ele2.instantiate()
-	add_child(ele2scene)
-	combatArray.push_front(ele2scene)
+
+	combatArray.push_front(add_unit(ele1,Vector2(40,0)))
+	combatArray.push_front(add_unit(ele2,Vector2(-40,0)))
+	
+func add_unit(packed:PackedScene,pos:Vector2):
+	var scene = packed.instantiate()
+	scene.position = pos
+	add_child(scene)
+	return scene
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	return
 	if combat_timer > 2:
 		_combatRound()
 	else:

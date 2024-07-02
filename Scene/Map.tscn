@@ -8,3 +8,5 @@ script = ExtResource("1_p4e2p")
 
 [node name="FireElemental" parent="." instance=ExtResource("1_11u77")]
 position = Vector2(1, 1)
+
+[node name="Camera2D" type="Camera2D" parent="."]
